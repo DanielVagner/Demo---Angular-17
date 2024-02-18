@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+@for $i from 1 through 5 {
+    .mr-#{$i} {
+      margin-bottom: $i *
+        0.5rem; // Multiplies the iteration number by 0.5 to get the rem value
+    }
+  }

@@ -1,0 +1,13 @@
+<div class="flex-evenly mr-2">
+  <button (click)="isLoaded = true" mat-raised-button color="primary">
+    Show
+  </button>
+  <button (click)="isPrefetch = true" mat-raised-button color="primary">
+    Prefetch
+  </button>
+</div>
+@defer(when isLoaded; prefetch when isPrefetch){
+<app-card></app-card>
+}@placeholder{
+<app-skeleton></app-skeleton>
+}

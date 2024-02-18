@@ -1,0 +1,47 @@
+.skeleton {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skeleton-line {
+    height: 16px;
+    background-color: #e0e0e0;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150px; /* Hide the shimmer to the left */
+      height: 100%;
+      width: 150px;
+      background: linear-gradient(to right, transparent 0%, #f0f0f0 50%, transparent 100%);
+      animation: shimmer 1.5s infinite;
+    }
+  }
+
+    /* Different lengths for the lines */
+    .short {
+        width: 30%;
+      }
+      
+      .medium {
+        width: 50%;
+      }
+      
+      .long {
+        width: 100%;
+      }
+      
+      @keyframes shimmer {
+        0% {
+          left: -150px;
+        }
+        100% {
+          left: 100%;
+        }
+      }
