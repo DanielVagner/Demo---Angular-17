@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 
 export interface PeriodicElement {
@@ -22,12 +24,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
 
-const MATERIAL = [MatTableModule];
+const MATERIAL = [MatTableModule, MatIconModule];
 
 @Component({
   selector: 'app-lazy-loaded',
   standalone: true,
-  imports: [MATERIAL],
+  imports: [MATERIAL, RouterLink],
   templateUrl: './lazy-loaded.component.html',
   styleUrl: './lazy-loaded.component.scss'
 })
