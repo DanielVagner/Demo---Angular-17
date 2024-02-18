@@ -11,4 +11,9 @@ export const routes: Routes = [
         path: 'home',
         component: HomeComponent
     },
+    {
+        path: 'lazy-loaded',
+        loadChildren: () => 
+            import ('./lazy-loaded/lazy-loaded.routes').then((m)=> m.routes)
+    },
 ];
