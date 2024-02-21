@@ -3,14 +3,16 @@
   <div class="content">
     <div class="left-side">
       <img
-        routerLink="/lazy-loaded"
+        (click)="navigateHome()"
         [src]="svgPath"
         alt="Angular Logo"
         class="angular-logo mt-2"
       />
     </div>
   </div>
-  }@placeholder{ NO TITLE }
+  }@placeholder{
+  <h1 class="center">NO TITLE</h1>
+  }
 </div>
 
 <div>
@@ -29,11 +31,12 @@
     <app-card></app-card>
     }@placeholder{
     <app-skeleton></app-skeleton>
+    }@loading(minimum 5s){
+    <mat-progress-spinner class="example-margin" style="margin:0 auto" [color]="color" [mode]="mode">
+    </mat-progress-spinner>
     }@error {
-    <div>
-      <h1 style="text-align: center; background-color: red">
-        Couldn't load the component.
-      </h1>
+    <div class="vh-10">
+      <h1 class="error">Couldn't load the component.</h1>
     </div>
     }
   </div>

@@ -52,24 +52,37 @@ body {
   justify-content: space-between;
 }
 
+.error {
+  text-align: center;
+  background-color: red;
+}
+
+.center{
+  text-align: center;
+}
+
 @for $i from 1 through 5 {
   .mb-#{$i} {
-    margin-bottom: $i *
-      0.5rem; 
+    margin-bottom: $i * 0.5rem;
   }
 }
 
 @for $i from 1 through 5 {
   .m-#{$i} {
-    margin: $i *
-      0.5rem; 
+    margin: $i * 0.5rem;
   }
 }
 
 @for $i from 1 through 5 {
   .mt-#{$i} {
-    margin-top: $i *
-      0.5rem; 
+    margin-top: $i * 0.5rem;
+  }
+}
+
+
+@for $i from 1 through 10 {
+  .vh-#{$i} {
+    height: $i * 10vh;
   }
 }
 
