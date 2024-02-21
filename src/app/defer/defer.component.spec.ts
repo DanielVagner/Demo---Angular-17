@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrefetchComponent } from './prefetch.component';
+import { DeferComponent } from './defer.component';
 
-describe('PrefetchComponent', () => {
-  let component: PrefetchComponent;
-  let fixture: ComponentFixture<PrefetchComponent>;
+describe('DeferComponent', () => {
+  let component: DeferComponent;
+  let fixture: ComponentFixture<DeferComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrefetchComponent]
+      imports: [DeferComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PrefetchComponent);
+    fixture = TestBed.createComponent(DeferComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

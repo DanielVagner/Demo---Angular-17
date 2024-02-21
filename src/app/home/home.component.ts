@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { PrefetchComponent } from '../prefetch/prefetch.component';
 import { SkeletonComponent } from '../skeleton/skeleton.component';
 import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
-const COMPONENTS = [PrefetchComponent, SkeletonComponent];
-const MATERIAL = [MatButtonModule];
+const COMPONENTS = [SkeletonComponent];
+const MATERIAL = [MatButtonModule, MatIconModule];
 
 @Component({
   selector: 'app-home',

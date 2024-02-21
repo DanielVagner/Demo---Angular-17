@@ -16,4 +16,9 @@ export const routes: Routes = [
         loadChildren: () => 
             import ('./lazy-loaded/lazy-loaded.routes').then((m)=> m.routes)
     },
+    {
+        path: 'defer',
+        loadChildren: () => 
+            import ('./defer/defer.routes').then((m)=> m.routes)
+    },
 ];
