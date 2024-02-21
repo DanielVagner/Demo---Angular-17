@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skeleton',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './skeleton.component.html',
   styleUrl: './skeleton.component.scss'
 })
-export class SkeletonComponent {
+export class SkeletonComponent {   
   protected skeletonCount = new Array(5).fill(0);
   protected skeletonShortCount = new Array(2).fill(0);
 }

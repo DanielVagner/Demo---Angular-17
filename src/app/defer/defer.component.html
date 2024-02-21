@@ -1,17 +1,80 @@
-<div>
-    <div class="flex-space m-4">
-      <button (click)="displayState()" mat-raised-button color="primary">
-        <mat-icon>visibility</mat-icon>
-        Show
-      </button>
-      <button (click)="prefetchState()" mat-raised-button color="primary">
-        <mat-icon>downloading</mat-icon>
-        Prefetch
-      </button>
+<div class="main">
+  @defer(){
+  <div class="content">
+    <div class="left-side">
+      <img
+        routerLink="/lazy-loaded"
+        [src]="svgPath"
+        alt="Angular Logo"
+        class="angular-logo mt-2"
+      />
     </div>
+  </div>
+  }@placeholder{ NO TITLE }
+</div>
+
+<div>
+  <div class="flex-space m-4">
+    <button (click)="displayState()" mat-raised-button color="primary">
+      <mat-icon>visibility</mat-icon>
+      Show
+    </button>
+    <button (click)="prefetchState()" mat-raised-button color="primary">
+      <mat-icon>downloading</mat-icon>
+      Prefetch
+    </button>
+  </div>
+  <div class="mb-2">
     @defer(when isDisplay; prefetch when performPrefetch){
     <app-card></app-card>
     }@placeholder{
     <app-skeleton></app-skeleton>
+    }@error {
+    <div>
+      <h1 style="text-align: center; background-color: red">
+        Couldn't load the component.
+      </h1>
+    </div>
     }
   </div>
+
+  @defer (on timer(1000)) {
+  <section class="m-4">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
+    vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
+    harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+      quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
+      incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
+    </p>
+  </section>
+  } @placeholder{
+  <app-skeleton></app-skeleton>
+  } @if (!isVisible) {
+  <div class="flex-evenly mb-2">
+    <button (click)="isVisible = true" mat-raised-button color="primary">
+      Display text
+    </button>
+  </div>
+  } @defer (when isVisible) {
+  <section class="m-4">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
+    vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
+    harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+      quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
+      incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
+    </p>
+  </section>
+  } @placeholder{
+  <app-skeleton></app-skeleton>
+  } @defer (on viewport) {
+  <section class="m-4">
+    <app-heavy></app-heavy>
+  </section>
+  } @placeholder{
+  <app-skeleton></app-skeleton>
+  }
+</div>

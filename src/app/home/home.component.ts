@@ -16,7 +16,6 @@ const MATERIAL = [MatButtonModule, MatIconModule];
 })
 export class HomeComponent {
   protected svgPath = 'assets/logo.svg';
-  protected isVisible = false;
   protected isPrefetch = false;
   protected isLoaded = false;
 }
