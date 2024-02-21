@@ -1,49 +1,58 @@
 <main class="main">
-    <div class="content">
-      <div class="left-side">
-        <img routerLink="/lazy-loaded" [src]="svgPath" alt="Angular Logo" class="angular-logo" />
-      </div>
+  <div class="content">
+    <div class="left-side">
+      <img
+        routerLink="/lazy-loaded"
+        [src]="svgPath"
+        alt="Angular Logo"
+        class="angular-logo"
+      />
     </div>
-  
-    @defer (on timer(5000)) {
-    <section class="mr-3">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
-      vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
-      harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
-        quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
-        incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
-      </p>
-    </section>
-    } @placeholder{
-    <app-skeleton></app-skeleton>
-    }
-  
-    <div class="flex-evenly mr-2">
-      <button (click)="isVisible = true" mat-raised-button color="primary">
-        Display text
-      </button>
-    </div>
-  
-    @defer (when isVisible) {
-    <section>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
-      vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
-      harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
-        quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
-        incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
-      </p>
-    </section>
-    } @placeholder{
-    <app-skeleton></app-skeleton>
-    }
-  
-    @defer() {
-    <app-prefetch></app-prefetch>
-    }@placeholder{
-    <app-skeleton></app-skeleton>
-    }
-  </main>
+  </div>
+
+  @defer (on timer(1000)) {
+  <section class="mr-3">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
+    vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
+    harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+      quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
+      incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
+    </p>
+  </section>
+  } @placeholder{
+  <app-skeleton></app-skeleton>
+  }
+
+  <div class="flex-evenly mr-2">
+    <button (click)="isVisible = true" mat-raised-button color="primary">
+      Display text
+    </button>
+  </div>
+
+  @defer (when isVisible) {
+  <section>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
+    vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
+    harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+      quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
+      incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
+    </p>
+  </section>
+  } @placeholder{
+  <app-skeleton></app-skeleton>
+  }
+  <app-prefetch></app-prefetch>
+</main>
+
+<!-- @if (isVisible) {
+<h1>is visible</h1>
+}
+@else if (!isVisible) {
+<h1>is not visible</h1>
+}@else {
+  <h1>condition not working</h1>
+} -->

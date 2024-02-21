@@ -10,7 +10,7 @@ const MATERIAL = [MatButtonModule];
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule, COMPONENTS, MATERIAL, RouterLink],
+  imports: [COMPONENTS, MATERIAL, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

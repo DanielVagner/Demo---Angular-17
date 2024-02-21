@@ -21,3 +21,6 @@ body {
         0.5rem; // Multiplies the iteration number by 0.5 to get the rem value
     }
   }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
