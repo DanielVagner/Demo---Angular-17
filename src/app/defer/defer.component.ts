@@ -6,19 +6,27 @@ import { CardComponent } from './card/card.component';
 import { HeavyComponent } from './heavy/heavy.component';
 import { Router } from '@angular/router';
 
-import {ThemePalette} from '@angular/material/core';
-import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatSliderModule} from '@angular/material/slider';
-
-const MATERIAL = [MatSliderModule, MatProgressSpinnerModule, MatButton, MatIcon]
-const COMPONENT = [SkeletonComponent, CardComponent, HeavyComponent]
+import { ThemePalette } from '@angular/material/core';
+import {
+  ProgressSpinnerMode,
+  MatProgressSpinnerModule,
+} from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
 
 @Component({
   selector: 'app-defer',
   standalone: true,
-  imports: [MATERIAL, COMPONENT],
+  imports: [
+    MatSliderModule,
+    MatProgressSpinnerModule,
+    MatButton,
+    MatIcon,
+    SkeletonComponent,
+    CardComponent,
+    HeavyComponent,
+  ],
   templateUrl: './defer.component.html',
-  styleUrl: './defer.component.scss'
+  styleUrl: './defer.component.scss',
 })
 export class DeferComponent {
   protected isDisplay: boolean = false;
@@ -29,18 +37,17 @@ export class DeferComponent {
   protected color: ThemePalette = 'accent';
   protected mode: ProgressSpinnerMode = 'indeterminate';
 
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   prefetchState() {
     this.performPrefetch = true;
   }
 
-  displayState(){
+  displayState() {
     this.isDisplay = true;
   }
 
-  navigateHome(){
+  navigateHome() {
     this.router.navigate(['/home']);
   }
 }
