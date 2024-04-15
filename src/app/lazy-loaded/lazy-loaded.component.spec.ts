@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LazyLoadedComponent } from './lazy-loaded.component';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('LazyLoadedComponent', () => {
   let component: LazyLoadedComponent;
@@ -8,7 +10,15 @@ describe('LazyLoadedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LazyLoadedComponent]
+      imports: [LazyLoadedComponent],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({ id: 'lazy-loaded' }),
+          },
+        },
+      ],
     })
     .compileComponents();
     

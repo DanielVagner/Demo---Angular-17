@@ -4,9 +4,10 @@ import { TestBed, inject } from '@angular/core/testing';
 import { SignalService } from './signal.service';
 
 describe('Service: Signal', () => {
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SignalService]
+      providers: [SignalService],
     });
   });
 
