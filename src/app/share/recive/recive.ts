@@ -20,7 +20,7 @@ import { SlicePipe } from '@angular/common';
       <h3>Listen to changes from parent</h3>
       <p class="wrap-text">
         {{
-          inputText().length > 10
+          inputText().length > 20
             ? (inputText() | slice: 0 : 20) + '...'
             : inputText()
         }}
