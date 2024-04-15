@@ -5,12 +5,12 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'send',
+  selector: 'app-send',
   standalone: true,
   imports: [MatButtonModule, CommonModule],
   template: `<button mat-raised-button color="primary" (click)="send()"> Send </button>`,
 })
-export class Send {
+export class SendComponent {
   transfer = inject(SignalService);
 
   send() {

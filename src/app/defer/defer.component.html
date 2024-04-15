@@ -1,17 +1,16 @@
 <div class="main">
-  @defer(){
-  <div class="content">
-    <div class="left-side">
-      <img
-        (click)="navigateHome()"
-        [src]="svgPath"
-        alt="Angular Logo"
-        class="angular-logo mt-2"
-      />
+  @defer {
+    <div class="content">
+      <div class="left-side">
+        <img
+          (click)="navigateHome()"
+          [src]="svgPath"
+          alt="Angular Logo"
+          class="angular-logo mt-2" />
+      </div>
     </div>
-  </div>
-  }@placeholder{
-  <h1 class="center">NO TITLE</h1>
+  } @placeholder {
+    <h1 class="center">NO TITLE</h1>
   }
 </div>
 
@@ -27,57 +26,66 @@
     </button>
   </div>
   <div class="mb-2">
-    @defer(when isDisplay; prefetch when performPrefetch){
-    <app-card></app-card>
-    }@placeholder{
-    <app-skeleton></app-skeleton>
-    }@loading(minimum 5s){
-    <mat-progress-spinner class="example-margin" style="margin:0 auto" [color]="color" [mode]="mode">
-    </mat-progress-spinner>
-    }@error {
-    <div class="vh-10">
-      <h1 class="error">Couldn't load the component.</h1>
-    </div>
+    @defer (when isDisplay; prefetch when performPrefetch) {
+      <app-card></app-card>
+    } @placeholder {
+      <app-skeleton></app-skeleton>
+    } @loading (minimum 5s) {
+      <mat-progress-spinner
+        class="example-margin"
+        style="margin: 0 auto"
+        [color]="color"
+        [mode]="mode">
+      </mat-progress-spinner>
+    } @error {
+      <div class="vh-10">
+        <h1 class="error">Couldn't load the component.</h1>
+      </div>
     }
   </div>
 
   @defer (on timer(1000)) {
-  <section class="m-4">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
-    vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
-    harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
-      quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
-      incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
-    </p>
-  </section>
-  } @placeholder{
-  <app-skeleton></app-skeleton>
-  } @if (!isVisible) {
-  <div class="flex-evenly mb-2">
-    <button (click)="isVisible = true" mat-raised-button color="primary">
-      Display text
-    </button>
-  </div>
-  } @defer (when isVisible) {
-  <section class="m-4">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
-    vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates, minus
-    harum sequi officia laboriosam earum, amet magni, ullam maiores omnis.
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
-      quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
-      incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
-    </p>
-  </section>
-  } @placeholder{
-  <app-skeleton></app-skeleton>
-  } @defer (on viewport) {
-  <section class="m-4">
-    <app-heavy></app-heavy>
-  </section>
-  } @placeholder{
-  <app-skeleton></app-skeleton>
+    <section class="m-4">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
+      vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates,
+      minus harum sequi officia laboriosam earum, amet magni, ullam maiores
+      omnis.
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+        quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
+        incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
+      </p>
+    </section>
+  } @placeholder {
+    <app-skeleton></app-skeleton>
+  }
+  @if (!isVisible) {
+    <div class="flex-evenly mb-2">
+      <button (click)="isVisible = true" mat-raised-button color="primary">
+        Display text
+      </button>
+    </div>
+  }
+  @defer (when isVisible) {
+    <section class="m-4">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium rerum
+      vel possimus assumenda perspiciatis veniam ut ducimus hic voluptates,
+      minus harum sequi officia laboriosam earum, amet magni, ullam maiores
+      omnis.
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et explicabo
+        quod, sint unde autem minus distinctio magnam quidem reiciendis dolor
+        incidunt iusto ex delectus, dolorum, iure necessitatibus ducimus ad qui.
+      </p>
+    </section>
+  } @placeholder {
+    <app-skeleton></app-skeleton>
+  }
+  @defer (on viewport) {
+    <section class="m-4">
+      <app-heavy></app-heavy>
+    </section>
+  } @placeholder {
+    <app-skeleton></app-skeleton>
   }
 </div>
