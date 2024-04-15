@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class SendComponent {
   transfer = inject(SignalService);
 
+  // call service to update count
   send() {
     this.transfer.updateCount();
   }

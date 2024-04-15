@@ -10,8 +10,20 @@
     </div>
   </div>
 
-  <div class="p-2 d-flex flex-column align-items-center justify-content-center">
-    <app-send class="mb-2"></app-send>
-    <app-receive></app-receive>
+  <div class="center">
+    <mat-form-field class="example-form-field">
+      <mat-label>Clearable input</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      @if (value) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+  </div>
+
+  <div class="p-2 d-flex flex-column align-items-center justify-content-center ">
+    <app-send class="mb-2 width-10 d-flex justify-content-center flex-column"></app-send>
+    <app-receive class="width-10 d-flex justify-content-center flex-column" [inputText]="value"></app-receive>
   </div>
 </main>
