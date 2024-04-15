@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { SignalService } from '../../shared/signal.service';
+import { SignalService } from '../../shared/services/signal.service';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 

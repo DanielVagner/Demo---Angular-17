@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { SkeletonComponent } from '../skeleton/skeleton.component';
+import { SkeletonComponent } from '../shared/components/skeleton/skeleton.component';
 import { CardComponent } from './card/card.component';
 import { HeavyComponent } from './heavy/heavy.component';
 import { Router } from '@angular/router';

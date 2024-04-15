@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { SkeletonComponent } from '../skeleton/skeleton.component';
+import { SkeletonComponent } from '../shared/components/skeleton/skeleton.component';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 

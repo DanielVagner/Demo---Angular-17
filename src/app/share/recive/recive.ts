@@ -1,5 +1,5 @@
 import { Component, effect, inject } from '@angular/core';
-import { SignalService } from '../../shared/signal.service';
+import { SignalService } from '../../shared/services/signal.service';
 
 @Component({
   selector: 'app-receive',

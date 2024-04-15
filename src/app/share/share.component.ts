@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReceiveComponent } from './recive/recive';
 import { SendComponent } from './send/send';
@@ -10,6 +10,7 @@ import { SendComponent } from './send/send';
   templateUrl: './share.component.html',
   styleUrls: ['./share.component.scss'],
   imports: [CommonModule, SendComponent, ReceiveComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShareComponent {
   protected svgPath = 'assets/logo.svg';

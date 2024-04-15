@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import { SkeletonComponent } from '../skeleton/skeleton.component';
+import { SkeletonComponent } from '../shared/components/skeleton/skeleton.component';
 
 
 export interface PeriodicElement {

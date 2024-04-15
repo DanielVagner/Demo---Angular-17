@@ -36,6 +36,10 @@ Building on Angular's lazy loading, v17 enhances support for dynamic imports and
 
 SSR in Angular v17 has been optimized for faster rendering and reduced time-to-first-byte (TTFB). The demo includes examples of SSR configurations and optimizations that leverage these improvements for SEO and performance.
 
+### Angular Signals
+
+Angular Signals is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize rendering updates.
+
 ### Improved Form Validation
 
 Angular v17 enhances form validation mechanisms, offering more intuitive and flexible validation processes. The demo application demonstrates these improvements, providing examples of custom validators and validation strategies.
