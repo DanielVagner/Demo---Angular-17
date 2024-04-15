@@ -1,8 +1,8 @@
 <main class="main">
   <div class="content">
-    <div class="left-side">
+    <div>
       <img
-        routerLink="/lazy-loaded"
+        routerLink="/home"
         [src]="svgPath"
         alt="Angular Logo"
         class="angular-logo"
@@ -18,6 +18,12 @@
     <button routerLink="/defer" mat-raised-button color="primary">
       <mat-icon>visibility</mat-icon>
       Deferrable views
+    </button>
+  </div>
+  <div class="flex-evenly p-2">
+    <button class="full-width" routerLink="/share" mat-raised-button color="primary">
+      <mat-icon>share</mat-icon>
+      signal
     </button>
   </div>
 </main>

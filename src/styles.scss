@@ -79,6 +79,12 @@ body {
   }
 }
 
+@for $i from 1 through 5 {
+  .p-#{$i} {
+    padding: $i * 0.5rem;
+  }
+}
+
 
 @for $i from 1 through 10 {
   .vh-#{$i} {

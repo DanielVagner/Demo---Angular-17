@@ -21,4 +21,9 @@ export const routes: Routes = [
         loadChildren: () => 
             import ('./defer/defer.routes').then((m)=> m.routes)
     },
+    {
+        path: 'share',
+        loadChildren: () => 
+            import ('./share/share.routes').then((m)=> m.routes)
+    }
 ];
